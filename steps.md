@@ -1,5 +1,7 @@
 # My PERN App
 
+## Backend setup (03:30)
+
 App name:
 
 ```
@@ -41,4 +43,21 @@ We start editing files:
 cd ../..
 code .
 ```
+
+With the first commit we can run an empty server:
+
+```
+# ./sosbase/backend/
+cd backend
+npm run start
+```
+
+With the second commit we have logging and a files change awareness:
+
+```
+# ./sosbase/backend/
+npm run dev
+```
+
+## Endpoints (13:26)
 
