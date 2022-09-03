@@ -61,9 +61,12 @@ npm run dev
 
 ## Endpoints (13:26)
 
-En el 3rd commit we create a route and return "Hello World" by just visiting: `http://localhost:3000/`.
+commit3:
+	We create a route and return "Hello World" by just visiting: `http://localhost:3000/`.
 
-Tested all possibilities (GET, PUT, DEL & POST) with thunderclient. Seems quite straight forward.
+commit4:
+	We add a basic CRUD for all possibilities (GET, PUT, DEL & POST).
+	And we can test them with thunderclient.
 
 ## Conexión a PostgreSQL (21:03)
 
@@ -86,5 +89,19 @@ touch db.sql
 
 The description for the DB to connect is in the `db.sql`.
 
-Luego cambio el get para hacer un pedido a la DB y uso console log para entender el elemento resultante (commit 4).
+Luego cambio el get para hacer un pedido a la DB y uso console log para entender el elemento resultante (commit5).
+
+Viendo el console.log:
+
+```
+Result {
+  command: 'SELECT',
+  rowCount: 1,
+  oid: null,
+  rows: [ { now: 2022-09-03T20:40:52.971Z } ],
+  fields: [
+  ...
+```
+
+Lo que quiero es: `result.rows[0].now` (commit6).
 

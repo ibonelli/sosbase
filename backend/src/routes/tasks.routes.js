@@ -5,8 +5,7 @@ const router = Router();
 
 router.get("/tasks", async (req, res) => {
     const result = await pool.query("SELECT NOW();");
-    console.log(result);
-    res.json("Ejecutado.");
+    res.json(result.rows[0].now);
 });
 
 router.get("/tasks/10", (req, res) => {
