@@ -109,3 +109,10 @@ Lo que quiero es: `result.rows[0].now` (commit6).
 
 commit6:
 	Movemos toda la funcionalidad a un controlador y lo invocamos (más ordenado).
+commit7:
+	Movemos todas las funcionalidades al controlador.
+
+## Metodo POST - Crear Tarea (34:56)
+
+commit8:
+	Recibimos en el controlador un JSON. Agregado además el pedido via ThunderPOST.

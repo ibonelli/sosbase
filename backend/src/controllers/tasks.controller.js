@@ -11,6 +11,8 @@ const getTasks = (req, res) => {
 }
 
 const createTasks = (req, res) => {
+    const task = req.body;
+    console.log(task);
     res.send("Creating tasks.");
 }
 
