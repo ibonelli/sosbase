@@ -63,3 +63,28 @@ npm run dev
 
 En el 3rd commit we create a route and return "Hello World" by just visiting: `http://localhost:3000/`.
 
+Tested all possibilities (GET, PUT, DEL & POST) with thunderclient. Seems quite straight forward.
+
+## Conexión a PostgreSQL (21:03)
+
+We need the postgres server running, I used the dockerized version.
+
+We also need the node "pg" module:
+
+```
+# ./sosbase/backend/
+npm i pg
+```
+
+We need to manually create de database:
+
+```
+# ./sosbase/
+mkdir database ; cd database
+touch db.sql
+```
+
+The description for the DB to connect is in the `db.sql`.
+
+Luego cambio el get para hacer un pedido a la DB y uso console log para entender el elemento resultante (commit 4).
+
