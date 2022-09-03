@@ -105,3 +105,7 @@ Result {
 
 Lo que quiero es: `result.rows[0].now` (commit6).
 
+## Controladores del Servidor (29:43)
+
+commit6:
+	Movemos toda la funcionalidad a un controlador y lo invocamos (más ordenado).
