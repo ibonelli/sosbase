@@ -61,3 +61,5 @@ npm run dev
 
 ## Endpoints (13:26)
 
+En el 3rd commit we create a route and return "Hello World" by just visiting: `http://localhost:3000/`.
+
