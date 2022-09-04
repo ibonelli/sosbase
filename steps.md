@@ -133,3 +133,8 @@ commit10:
 	Ahora devolvemos un JSON con la respuesta de postgres.
 commit11:
 	Manejamos el error y lo enviamos como un JSON.
+
+## Metodo GET - Listar Tareas (46:27)
+
+commit12:
+	Listamos todas las tareas y las mostramos por consola.

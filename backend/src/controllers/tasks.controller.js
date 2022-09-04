@@ -1,8 +1,10 @@
 const pool = require("../db");
 
 const getAllTasks = async (req, res) => {
-    //const res ult = await pool.query("SELECT NOW();");
-    //res.json(result.rows[0].now);
+    const allTasks = await pool.query(
+        "SELECT * FROM task;"
+        );
+    console.log(allTasks);
     res.send("Retrieving a list of tasks.");
 }
 
