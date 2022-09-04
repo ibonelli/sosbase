@@ -12,11 +12,17 @@ const getTasks = (req, res) => {
 
 const createTasks = async (req, res) => {
     const { title, description } = req.body;
-    result = await pool.query(
-        "INSERT INTO task (title, description) VALUES ($1, $2) RETURNING *",
-        [title, description]
-        );
-    res.json(result.rows[0]);
+
+    try {
+        const result = await pool.query(
+            "INSERT INTO task (title, description) VALUES ($1, $2) RETURNING *",
+            [title, description]
+            );
+        res.json(result.rows[0]);
+    } catch(error) {
+        //console.log(error.message);
+        res.json({ error: error.message });
+    }
 }
 
 const deleteTasks = (req, res) => {

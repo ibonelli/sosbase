@@ -131,3 +131,5 @@ Result {
 
 commit10:
 	Ahora devolvemos un JSON con la respuesta de postgres.
+commit11:
+	Manejamos el error y lo enviamos como un JSON.
