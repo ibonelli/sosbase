@@ -1,11 +1,15 @@
 const pool = require("../db");
 
 const getAllTasks = async (req, res) => {
-    const allTasks = await pool.query(
-        "SELECT * FROM task;"
-        );
-    console.log(allTasks);
-    res.send("Retrieving a list of tasks.");
+    try {
+        const allTasks = await pool.query(
+            "SELECT * FROM task;"
+            );
+        res.json(allTasks.rows);
+    } catch(error) {
+        //console.log(error.message);
+        res.json({ error: error.message });
+    }
 }
 
 const getTasks = (req, res) => {
