@@ -116,3 +116,18 @@ commit7:
 
 commit8:
 	Recibimos en el controlador un JSON. Agregado además el pedido via ThunderPOST.
+commit9:
+	Insertamos algo en la DB y vemos con console log que información nos da postgres.
+
+```
+Result {
+  command: 'INSERT',
+  rowCount: 1,
+  oid: 0,
+  rows: [ { id: 4, title: 'tarea2', description: 'Another description' } ],
+  fields: [
+    ...
+```
+
+commit10:
+	Ahora devolvemos un JSON con la respuesta de postgres.
