@@ -140,3 +140,8 @@ commit12:
 	Listamos todas las tareas y las mostramos por consola.
 commit13:
 	Ahora si lo vemos como un JSON que retorna nuestro backend.
+
+## Metodo GET - Obtener Tarea (50:34)
+
+commit14:
+	We get a param from the request and we show it on the console.

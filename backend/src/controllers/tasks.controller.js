@@ -13,6 +13,7 @@ const getAllTasks = async (req, res) => {
 }
 
 const getTasks = (req, res) => {
+    console.log(req.params.id);
     res.send("Retrieving a single task.");
 }
 
