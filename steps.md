@@ -147,3 +147,5 @@ commit14:
 	We get a param from the request and we show it on the console.
 commit15:
 	We now get from the DB the requested data and show it in the console.
+commit16:
+	Getting the data as a JSON and dealing with errors.
