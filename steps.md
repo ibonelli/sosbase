@@ -149,3 +149,17 @@ commit15:
 	We now get from the DB the requested data and show it in the console.
 commit16:
 	Getting the data as a JSON and dealing with errors.
+commit17:
+	Sanitazing the input to make sure we only get numbers as IDs.
+		(using validation shown in https://medium.com/sean3z/express-route-param-regex-validation-de3790d110c3)
+
+Some interesting stuff:
+
+- [Curly braces around JS variable](https://stackoverflow.com/questions/25187903/what-do-curly-braces-around-javascript-variable-name-mean): This is similar to Python tupples. Starting with JavaScript 1.7 (and ECMAScript 6) you can do [destructuring assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
+- [Express Validator](https://express-validator.github.io/docs/)
+- [Express Routing](https://expressjs.com/en/guide/routing.html)
+- [Express route param regex validation](https://medium.com/sean3z/express-route-param-regex-validation-de3790d110c3)
+- [How to make input validation simple and clean in your Express.js app](https://www.freecodecamp.org/news/how-to-make-input-validation-simple-and-clean-in-your-express-js-app-ea9b5ff5a8a7/)
+
+## Metodo DELETE - Eliminar Tarea (58:07)
+

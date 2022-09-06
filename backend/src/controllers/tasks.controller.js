@@ -15,7 +15,7 @@ const getAllTasks = async (req, res) => {
 const getTasks = async (req, res) => {
     try {
         const {id} = req.params;
-    
+
         const result = await pool.query(
                 "SELECT * FROM task WHERE id = $1;",
                 [id]
