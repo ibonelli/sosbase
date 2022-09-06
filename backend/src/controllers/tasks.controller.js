@@ -62,7 +62,7 @@ const deleteTasks = async (req, res) => {
                 message: "Task not found"
             });
         } else {
-            res.json({ deleted: result.rowCount });
+            return res.sendStatus(204);
         }
     } catch(error) {
         console.log(error.message);
