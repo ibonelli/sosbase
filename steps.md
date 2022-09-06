@@ -165,3 +165,5 @@ Some interesting stuff:
 
 commit18:
 	We delete the record and report it on the console.
+commit19:
+	We now properly return if the delete was successful or not.

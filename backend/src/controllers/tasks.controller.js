@@ -57,17 +57,13 @@ const deleteTasks = async (req, res) => {
                 [id]
                 );
         
-        console.log(result);
-        res.send("Deleting task...");
-/*
-        if (result.rows.length === 0) {
+        if (result.rowCount === 0) {
             return res.status(404).json({
                 message: "Task not found"
             });
         } else {
-            res.json(result.rows[0]);
+            res.json({ deleted: result.rowCount });
         }
-*/
     } catch(error) {
         console.log(error.message);
     }
