@@ -9,7 +9,7 @@ router.get("/tasks/:id([0-9]+)", getTasks);
 
 router.post("/tasks", createTasks);
 
-router.delete("/tasks", deleteTasks);
+router.delete("/tasks/:id([0-9]+)", deleteTasks);
 
 router.put("/tasks", updateTasks);
 

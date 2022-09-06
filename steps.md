@@ -163,3 +163,5 @@ Some interesting stuff:
 
 ## Metodo DELETE - Eliminar Tarea (58:07)
 
+commit18:
+	We delete the record and report it on the console.
