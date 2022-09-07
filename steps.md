@@ -169,3 +169,8 @@ commit19:
 	We now properly return if the delete was successful or not.
 commit20:
 	Returned content wasn't really necessary, so we return 204.
+
+## Metodo PUT - Actualizar Tarea (01:04:42)
+
+commit21:
+	We now have a update function working.

@@ -69,8 +69,26 @@ const deleteTasks = async (req, res) => {
     }
 }
 
-const updateTasks = (req, res) => {
-    res.send("Updating a task...");
+const updateTasks = async (req, res) => {
+    const { id } = req.params;
+    const { title, description } = req.body;
+
+    try {
+        const result = await pool.query(
+            "UPDATE task SET title = $1, description = $2 WHERE id = $3 RETURNING *;",
+            [title, description, id]
+        );
+
+        if (result.rowCount === 0) {
+            return res.status(404).json({
+                message: "Task not found"
+            });
+        } else {
+            res.json(result.rows[0]);
+        }
+    } catch (error) {
+        console.log(error.message);
+    }
 }
 
 module.exports = {
