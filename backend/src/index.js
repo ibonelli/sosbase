@@ -12,7 +12,7 @@ app.use(taskRoutes);
 
 app.use((err, req, res, next) => {
     return res.json({
-        message: 'Error!!!'
+        message: err.message
     })
 });
 

@@ -184,3 +184,5 @@ This part explains the use of next():
 
 commit22:
 	Added a middleware error function and use it on createTask with next.
+commit23:
+	Todos los errores ahora invocan al middleware y fuerzo un error en getAllTask para probarlo.

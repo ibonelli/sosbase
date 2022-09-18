@@ -2,13 +2,13 @@ const pool = require("../db");
 
 const getAllTasks = async (req, res, next) => {
     try {
+        throw new Error("Algo fue mal... :(");
         const allTasks = await pool.query(
             "SELECT * FROM task;"
             );
         res.json(allTasks.rows);
     } catch(error) {
-        //console.log(error.message);
-        res.json({ error: error.message });
+        next(error);
     }
 }
 
@@ -29,7 +29,7 @@ const getTasks = async (req, res, next) => {
             res.json(result.rows[0]);
         }
     } catch(error) {
-        console.log(error.message);
+        next(error);
     }
 }
 
@@ -43,8 +43,6 @@ const createTasks = async (req, res, next) => {
             );
         res.json(result.rows[0]);
     } catch(error) {
-        //console.log(error.message);
-        //res.json({ error: error.message });
         next(error);
     }
 }
@@ -66,7 +64,7 @@ const deleteTasks = async (req, res, next) => {
             return res.sendStatus(204);
         }
     } catch(error) {
-        console.log(error.message);
+        next(error);
     }
 }
 
@@ -88,7 +86,7 @@ const updateTasks = async (req, res, next) => {
             res.json(result.rows[0]);
         }
     } catch (error) {
-        console.log(error.message);
+        next(error);
     }
 }
 
