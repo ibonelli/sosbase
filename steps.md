@@ -182,7 +182,13 @@ This part explains the use of next():
 	http://expressjs.com/en/guide/using-middleware.html
 	https://arunrajeevan.medium.com/middleware-and-next-in-expressjs-node-39f7c0ef277e
 
+Also explains the use of:
+	throw new Error("Algo fue mal... :(");
+	within a try{}catch{}.
+
 commit22:
 	Added a middleware error function and use it on createTask with next.
 commit23:
 	Todos los errores ahora invocan al middleware y fuerzo un error en getAllTask para probarlo.
+commit24:
+	Removido el throw. Middleware listo e integrado.
