@@ -174,3 +174,13 @@ commit20:
 
 commit21:
 	We now have a update function working.
+
+## Express Middleware de Error (01:11:26)
+
+This part explains the use of next():
+	https://stackoverflow.com/questions/10695629/what-is-the-parameter-next-used-for-in-express
+	http://expressjs.com/en/guide/using-middleware.html
+	https://arunrajeevan.medium.com/middleware-and-next-in-expressjs-node-39f7c0ef277e
+
+commit22:
+	Added a middleware error function and use it on createTask with next.

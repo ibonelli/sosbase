@@ -10,5 +10,11 @@ app.use(express.json());
 
 app.use(taskRoutes);
 
+app.use((err, req, res, next) => {
+    return res.json({
+        message: 'Error!!!'
+    })
+});
+
 app.listen(3000);
 console.log("Server on port 3000");

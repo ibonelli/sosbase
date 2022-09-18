@@ -1,6 +1,6 @@
 const pool = require("../db");
 
-const getAllTasks = async (req, res) => {
+const getAllTasks = async (req, res, next) => {
     try {
         const allTasks = await pool.query(
             "SELECT * FROM task;"
@@ -12,7 +12,7 @@ const getAllTasks = async (req, res) => {
     }
 }
 
-const getTasks = async (req, res) => {
+const getTasks = async (req, res, next) => {
     try {
         const {id} = req.params;
 
@@ -33,7 +33,7 @@ const getTasks = async (req, res) => {
     }
 }
 
-const createTasks = async (req, res) => {
+const createTasks = async (req, res, next) => {
     const { title, description } = req.body;
 
     try {
@@ -44,11 +44,12 @@ const createTasks = async (req, res) => {
         res.json(result.rows[0]);
     } catch(error) {
         //console.log(error.message);
-        res.json({ error: error.message });
+        //res.json({ error: error.message });
+        next(error);
     }
 }
 
-const deleteTasks = async (req, res) => {
+const deleteTasks = async (req, res, next) => {
     try {
         const {id} = req.params;
 
@@ -69,7 +70,7 @@ const deleteTasks = async (req, res) => {
     }
 }
 
-const updateTasks = async (req, res) => {
+const updateTasks = async (req, res, next) => {
     const { id } = req.params;
     const { title, description } = req.body;
 
