@@ -192,3 +192,24 @@ commit23:
 	Todos los errores ahora invocan al middleware y fuerzo un error en getAllTask para probarlo.
 commit24:
 	Removido el throw. Middleware listo e integrado.
+
+## Variables de Entorno y CORS (01:18:26)
+
+```
+# ./sosbase/backend/
+npm i dotenv
+touch .env
+```
+
+With a .env file:
+
+```
+DB_USER = postgres
+DB_PASSWORD = faztpassword
+DB_HOST = localhost
+DB_PORT = 5432
+DB_DATABASE = tasksdb
+```
+
+commit25:
+	Added the dotenv module, a configuration and pull the config from a .env file (which we shouldn't/won't commit to the repo).
