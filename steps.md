@@ -213,3 +213,9 @@ DB_DATABASE = tasksdb
 
 commit25:
 	Added the dotenv module, a configuration and pull the config from a .env file (which we shouldn't/won't commit to the repo).
+commit26:
+	Added cors to the project (installed before) so ReactJS can communicate with this backend (both are servers).
+
+React will be in a port and Express on a different one, so we have a cross-origin we need to work around with [CORS](https://www.section.io/engineering-education/how-to-use-cors-in-nodejs-with-express/).
+
+## Configurando Frontend de React (01:25:50)
