@@ -219,3 +219,29 @@ commit26:
 React will be in a port and Express on a different one, so we have a cross-origin we need to work around with [CORS](https://www.section.io/engineering-education/how-to-use-cors-in-nodejs-with-express/).
 
 ## Configurando Frontend de React (01:25:50)
+
+```
+# ./sosbase/
+npx create-react-app frontend
+```
+
+commit27:
+	After replacing the main component and changing the port we have a running App.
+
+Create new files @ `src/components/*` :
+
+- Navbar.js
+- TaskForm.js
+- TaskList.js
+
+To create components (using the [ES7+ React/Redux/React-Native snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)) you type: `rfc` (react functional component).
+
+To have routes in the frontend we need another module:
+
+```
+npm i react-router-dom
+```
+
+commit28:
+	We change the App to have components and a router.
+
