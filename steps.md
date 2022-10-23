@@ -282,4 +282,12 @@ And we add the the bottom of the HTML head:
 - The [Google Web Fonts](https://mui.com/material-ui/getting-started/installation/#google-web-fonts)
 - And the [Icons](https://mui.com/material-ui/getting-started/installation/#icons)
 
-And we will start using the [Container](https://mui.com/material-ui/react-container/#fluid)
+And we will start using the:
+
+- [Container](https://mui.com/material-ui/react-container/#fluid)
+- [Button](https://mui.com/material-ui/react-button/)
+
+commit30:
+	We wrapped all our previous work into a MUI container.
+commit31:
+	Agregamos al Navbar un botón de la librería MUI.
