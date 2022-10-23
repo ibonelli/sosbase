@@ -244,4 +244,42 @@ npm i react-router-dom
 
 commit28:
 	We change the App to have components and a router.
+commit29:
+	We add a route to the router so we can show two components.
 
+We now have:
+
+- "/" : Which shows TasksList components
+- "/tasks/new" : Which shows TaskForm components
+
+Our React frontend is actually an application. To run it we do:
+
+```
+npm start
+```
+
+And to avoid running it in the default port I added to the `package.json`:
+
+```
+  "scripts": {
+    "start": "PORT=3003 react-scripts start",
+```
+
+You don't need to run it as an application, you can [export react app to pure static html](https://stackoverflow.com/questions/59025093/how-to-export-react-app-to-pure-static-html).
+
+## Material UI (01:37:02)
+
+[MUI docs](https://mui.com/): Before material aprox 400MB, after material 634M.
+
+```
+# ./sosbase/frontend
+npm install @mui/material @emotion/react @emotion/styled
+npm install @mui/icons-material
+```
+
+And we add the the bottom of the HTML head:
+
+- The [Google Web Fonts](https://mui.com/material-ui/getting-started/installation/#google-web-fonts)
+- And the [Icons](https://mui.com/material-ui/getting-started/installation/#icons)
+
+And we will start using the [Container](https://mui.com/material-ui/react-container/#fluid)
