@@ -313,3 +313,13 @@ commit33:
 	Mejoramos como se ve y ya podemos navegar entre el home y new task button.
 commit33:
 	Aplicamos un poco de estilo para que se vea mejor.
+
+## Formulario de Tareas (01:52:07)
+
+MUI components & props we will be using:
+
+- [Grid & the xs prop](https://mui.com/material-ui/react-grid/#basic-grid)
+- [Card](https://mui.com/material-ui/react-card/): Contain content and actions about a single subject.
+
+commit34:
+	Basic initial design with a grid.
