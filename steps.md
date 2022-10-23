@@ -291,3 +291,15 @@ commit30:
 	We wrapped all our previous work into a MUI container.
 commit31:
 	Agregamos al Navbar un botón de la librería MUI.
+
+## Navegacion (01:45:03)
+
+We will be using MUI components to build the navigation:
+
+- [Box](https://mui.com/material-ui/react-box/): Serves as a wrapper component for most of the CSS utility needs.
+- [AppBar](https://mui.com/material-ui/react-app-bar/#fixed-placement): Different kinds of navigation bars.
+- [Toolbar](https://mui.com/material-ui/api/toolbar/#component-name)
+- [Typography](https://mui.com/material-ui/api/typography/#props)
+
+commit32:
+	Agregamos una navegación y comenzamos a agregar las partes.
