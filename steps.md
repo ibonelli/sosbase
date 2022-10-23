@@ -305,9 +305,11 @@ Some general props that worth knowing:
 
 - [The sx prop](https://mui.com/system/getting-started/the-sx-prop/): Shortcut for defining custom styles that has access to the theme.
 - [Double curly braces in React's JSX syntax](https://stackoverflow.com/questions/22671582/what-is-the-purpose-of-double-curly-braces-in-reacts-jsx-syntax): It's an object literal inlined in the prop value.
+- [React Router useNavigate](https://reactrouter.com/en/main/hooks/use-navigate): This integrate the navigation with the component.
 
 commit32:
 	Agregamos una navegación y comenzamos a agregar las partes.
 commit33:
 	Mejoramos como se ve y ya podemos navegar entre el home y new task button.
-
+commit33:
+	Aplicamos un poco de estilo para que se vea mejor.

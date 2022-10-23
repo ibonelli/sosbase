@@ -11,8 +11,10 @@ export default function Navbar() {
       <AppBar position="static" color="transparent">
         <Container>
           <Toolbar>
-            <Typography sx={{ flexGrow: 1 }}>
-              <Link to="/">PERN Stack</Link>
+            <Typography variant="h6" sx={{ flexGrow: 1 }}>
+              <Link to="/" style={{ textDecoration: "none", color: '#eee'}}>
+                PERN Stack
+              </Link>
             </Typography>
             <Button variant="contained" color="primary" onClick={() => navigate("/tasks/new")}>
               New Task
