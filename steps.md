@@ -301,5 +301,13 @@ We will be using MUI components to build the navigation:
 - [Toolbar](https://mui.com/material-ui/api/toolbar/#component-name)
 - [Typography](https://mui.com/material-ui/api/typography/#props)
 
+Some general props that worth knowing:
+
+- [The sx prop](https://mui.com/system/getting-started/the-sx-prop/): Shortcut for defining custom styles that has access to the theme.
+- [Double curly braces in React's JSX syntax](https://stackoverflow.com/questions/22671582/what-is-the-purpose-of-double-curly-braces-in-reacts-jsx-syntax): It's an object literal inlined in the prop value.
+
 commit32:
 	Agregamos una navegación y comenzamos a agregar las partes.
+commit33:
+	Mejoramos como se ve y ya podemos navegar entre el home y new task button.
+
