@@ -333,3 +333,5 @@ commit37:
 	Looking better and we now have a button to save the form (with no action yet).
 commit38:
 	Styling a bit more so it looks better.
+commit39:
+	We add a submit function to handle the form submit and initially we simply print to the console.

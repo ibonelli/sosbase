@@ -1,6 +1,12 @@
 import { Grid, Card, Typography, CardContent, TextField, Button } from "@mui/material";
 
 export default function TaskForm() {
+  const handleSubmit = event => {
+    event.preventDefault();
+
+    console.log("submit");
+  }
+
   return (
     <Grid
       container
@@ -20,7 +26,7 @@ export default function TaskForm() {
             Create Task
           </Typography>
           <CardContent>
-            <form>
+            <form onSubmit={handleSubmit}>
               <TextField
                 variant="filled"
                 label="Write your Title"
