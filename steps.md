@@ -323,6 +323,11 @@ MUI components & props we will be using:
 - CardContent
 - TextField
 
+React stuff:
+
+- useState
+- useEffect
+
 commit34:
 	Basic initial design with a grid.
 commit35:

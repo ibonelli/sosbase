@@ -1,10 +1,25 @@
+import { useEffect, useState } from "react";
 import { Grid, Card, Typography, CardContent, TextField, Button } from "@mui/material";
 
 export default function TaskForm() {
+  const task = useState({
+    title: "",
+    description: "",
+  });
+
   const handleSubmit = event => {
     event.preventDefault();
 
     console.log("submit");
+  }
+
+  const handleChange = event => {
+    if ( event.target.name != "" ) {
+      console.log("name, updated to=", event.target.name);
+    }
+    if ( event.target.value != "" ) {
+      console.log("value, updated to=", event.target.value);
+    }
   }
 
   return (
@@ -34,6 +49,7 @@ export default function TaskForm() {
                   display: "block",
                   margin: ".5rem 0",
                 }}
+                onChange={handleChange}
                 inputProps={{ style: { color: "white" } }}
                 InputLabelProps={{ style: { color: "white" } }}
               />
@@ -46,6 +62,7 @@ export default function TaskForm() {
                   display: "block",
                   margin: ".5rem 0",
                 }}
+                onChange={handleChange}
                 inputProps={{ style: { color: "white" } }}
                 InputLabelProps={{ style: { color: "white" } }}
               />
