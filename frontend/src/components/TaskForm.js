@@ -12,10 +12,13 @@ export default function TaskForm() {
         <Card
           sx={{ mt: 5 }}
           style={{
+            backgroundColor: "#1E272E",
             padding: "1rem",
           }}
         >
-          <Typography>Create Task</Typography>
+          <Typography variant="h5" textAlign="center" color="white">
+            Create Task
+          </Typography>
           <CardContent>
             <form>
               <TextField
@@ -25,6 +28,8 @@ export default function TaskForm() {
                   display: "block",
                   margin: ".5rem 0",
                 }}
+                inputProps={{ style: { color: "white" } }}
+                InputLabelProps={{ style: { color: "white" } }}
               />
               <TextField
                 variant="filled"
@@ -35,6 +40,8 @@ export default function TaskForm() {
                   display: "block",
                   margin: ".5rem 0",
                 }}
+                inputProps={{ style: { color: "white" } }}
+                InputLabelProps={{ style: { color: "white" } }}
               />
               <Button
                 type="submit"
