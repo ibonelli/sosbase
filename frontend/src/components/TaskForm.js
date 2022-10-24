@@ -1,4 +1,4 @@
-import { Grid, Card, Typography, CardContent, TextField } from "@mui/material";
+import { Grid, Card, Typography, CardContent, TextField, Button } from "@mui/material";
 
 export default function TaskForm() {
   return (
@@ -21,13 +21,28 @@ export default function TaskForm() {
               <TextField
                 variant="filled"
                 label="Write your Title"
+                sx={{
+                  display: "block",
+                  margin: ".5rem 0",
+                }}
               />
               <TextField
                 variant="filled"
                 label="Write your Description"
                 multiline
                 rows={4}
+                sx={{
+                  display: "block",
+                  margin: ".5rem 0",
+                }}
               />
+              <Button
+                type="submit"
+                variant="contained"
+                color="primary"
+              >
+                Save
+              </Button>
               </form>
           </CardContent>
         </Card>
