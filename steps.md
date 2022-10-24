@@ -320,6 +320,12 @@ MUI components & props we will be using:
 
 - [Grid & the xs prop](https://mui.com/material-ui/react-grid/#basic-grid)
 - [Card](https://mui.com/material-ui/react-card/): Contain content and actions about a single subject.
+- CardContent
+- TextField
 
 commit34:
 	Basic initial design with a grid.
+commit35:
+	We also have a CardContent and TextField now.
+commit36:
+	We now have two fields (but they don't look great).
