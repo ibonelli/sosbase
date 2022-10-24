@@ -328,6 +328,9 @@ React stuff:
 - useState
 - useEffect
 
+Tools: Added to Chrome [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi/related?hl=es).
+	(Ver como funciona en commit 41 y 2h05m20s del video)
+
 commit34:
 	Basic initial design with a grid.
 commit35:
@@ -340,3 +343,10 @@ commit38:
 	Styling a bit more so it looks better.
 commit39:
 	We add a submit function to handle the form submit and initially we simply print to the console.
+commit40:
+	Adding a console log with each change of the TextField.
+commit41:
+	Ahora cambiamos en el estado en el componente React y mostramos por consola lo que enviaremos al backend.
+
+## Crear Tareas desde React (02:06:45)
+

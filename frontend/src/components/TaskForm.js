@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Grid, Card, Typography, CardContent, TextField, Button } from "@mui/material";
 
 export default function TaskForm() {
-  const task = useState({
+  const [task, setTask] = useState({
     title: "",
     description: "",
   });
@@ -10,17 +10,11 @@ export default function TaskForm() {
   const handleSubmit = event => {
     event.preventDefault();
 
-    console.log("submit");
+    console.log(task);
   }
 
-  const handleChange = event => {
-    if ( event.target.name != "" ) {
-      console.log("name, updated to=", event.target.name);
-    }
-    if ( event.target.value != "" ) {
-      console.log("value, updated to=", event.target.value);
-    }
-  }
+  const handleChange = (event) =>
+    setTask({ ...task, [event.target.name]: event.target.value });
 
   return (
     <Grid
