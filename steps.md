@@ -70,7 +70,12 @@ commit4:
 
 ## Conexión a PostgreSQL (21:03)
 
-We need the postgres server running, I used the dockerized version.
+We need the postgres server running, I used the dockerized version:
+
+```
+# ./weKnow/PERN/pern-example/
+docker-compose start
+```
 
 We also need the node "pg" module:
 
@@ -169,6 +174,10 @@ commit19:
 	We now properly return if the delete was successful or not.
 commit20:
 	Returned content wasn't really necessary, so we return 204.
+
+To delete you pass the ID at the end of the URL:
+	```http://localhost:3000/tasks/20```
+This deletes the record with ID=20
 
 ## Metodo PUT - Actualizar Tarea (01:04:42)
 
@@ -320,16 +329,29 @@ MUI components & props we will be using:
 
 - [Grid & the xs prop](https://mui.com/material-ui/react-grid/#basic-grid)
 - [Card](https://mui.com/material-ui/react-card/): Contain content and actions about a single subject.
-- CardContent
-- TextField
+- [CardContent](https://mui.com/material-ui/api/card-content/)
+- [TextField](https://mui.com/material-ui/react-text-field/)
 
-React stuff:
+React stuff... First step is to understand the [introduced Hooks](https://reactjs.org/docs/hooks-intro.html) which starting on React 16.8 will co-exist with the class approach. Hooks are completely opt-in & are 100% backwards-compatible.
 
-- useState
-- useEffect
+Why Hooks:
+
+- [It’s hard to reuse stateful logic between components](https://reactjs.org/docs/hooks-intro.html#its-hard-to-reuse-stateful-logic-between-components)
+- [Complex components become hard to understand](https://reactjs.org/docs/hooks-intro.html#complex-components-become-hard-to-understand)
+- [Classes confuse both people and machines](https://reactjs.org/docs/hooks-intro.html#classes-confuse-both-people-and-machines)
+
+Hooks are a more direct way to use the React features you already know — such as state, lifecycle, context, and refs. They don’t fundamentally change how React works, and your knowledge of components, props, and top-down data flow is just as relevant.
+In a nutshell a Hook is a special function that lets you "hook into" React features.
+
+There is a general explanation at [Hooks at a Glance](https://reactjs.org/docs/hooks-overview.html), but the two introduced hooks are:
+
+- [useState](https://reactjs.org/docs/hooks-state.html): Is a Hook that lets you add React state to function components. It returns a pair of values: the current state and a function that updates it.
+- [useEffect](https://reactjs.org/docs/hooks-effect.html): By using this Hook, you tell React that your component needs to do something after render.
 
 Tools: Added to Chrome [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi/related?hl=es).
 	(Ver como funciona en commit 41 y 2h05m20s del video)
+
+![React Component DeveloperTool](./React_Component_DeveloperTool.png "React Component DeveloperTool").
 
 commit34:
 	Basic initial design with a grid.
@@ -350,3 +372,40 @@ commit41:
 
 ## Crear Tareas desde React (02:06:45)
 
+Some generalities about what we will use in the code:
+
+- [Using the Fetch API (MDN)](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
+- [Using Async/Await with the Fetch API (YT video)](https://www.youtube.com/watch?v=Yp9KIcSKTNo)
+- [JS JSON Global object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON)
+
+One important thing that was missing from the video is the "catpure" of the data in the React component:
+
+```
+<TextField
+	variant="filled"
+	label="Write your Description"
+	...
+	name="description"			// We add the name of the field
+	onChange={handleChange}
+	value={task.description}	// We map the data to it
+	...
+```
+
+This makes the task object to have the proper fields in the response.
+
+commit42:
+	Sending the data to the backend doing POST.
+
+
+
+
+## To Watch Continue when finished...
+
+React c/ Hooks
+	https://www.youtube.com/c/LuisCabrera/videos
+
+useState explicado al detalle - Con 5 mini Apps - React
+	https://www.youtube.com/watch?v=kX70P85JnRE
+
+useEffect explicado al detalle - Con 3 mini Apps - React
+	https://www.youtube.com/watch?v=6lvI-gTF_X8

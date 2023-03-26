@@ -7,11 +7,18 @@ export default function TaskForm() {
     description: "",
   });
 
-  const handleSubmit = event => {
+  const handleSubmit = async(event) => {
     event.preventDefault();
 
-    console.log(task);
-  }
+    const res = await fetch("http://localhost:3000/tasks", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(task),
+    });
+
+    const data = await res.json();
+    console.log(data);
+  };
 
   const handleChange = (event) =>
     setTask({ ...task, [event.target.name]: event.target.value });
@@ -43,7 +50,9 @@ export default function TaskForm() {
                   display: "block",
                   margin: ".5rem 0",
                 }}
+                name="title"
                 onChange={handleChange}
+                value={task.title}
                 inputProps={{ style: { color: "white" } }}
                 InputLabelProps={{ style: { color: "white" } }}
               />
@@ -56,7 +65,9 @@ export default function TaskForm() {
                   display: "block",
                   margin: ".5rem 0",
                 }}
+                name="description"
                 onChange={handleChange}
+                value={task.description}
                 inputProps={{ style: { color: "white" } }}
                 InputLabelProps={{ style: { color: "white" } }}
               />
