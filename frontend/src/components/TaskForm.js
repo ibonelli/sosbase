@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Grid, Card, Typography, CardContent, TextField, Button } from "@mui/material";
 
 export default function TaskForm() {
@@ -6,6 +7,8 @@ export default function TaskForm() {
     title: "",
     description: "",
   });
+
+  const navigate = useNavigate();
 
   const handleSubmit = async(event) => {
     event.preventDefault();
@@ -17,7 +20,8 @@ export default function TaskForm() {
     });
 
     const data = await res.json();
-    console.log(data);
+
+    navigate("/");
   };
 
   const handleChange = (event) =>
