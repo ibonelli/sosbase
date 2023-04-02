@@ -31,6 +31,7 @@ export default function TasksList() {
             marginBottom: ".7rem",
             backgroundColor: "#1e272e",
             }}
+          key={task.id}
           >
             <CardContent
               style={{

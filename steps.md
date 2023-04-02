@@ -417,6 +417,8 @@ commit47:
 
 commit44:
 	We now have a successful delete which show on console the 204 status and no data (the REST was built like that).
+commit45:
+	We add a unique ID to the Card component to avoid the warning message in the log.
 
 
 ## To Watch Continue when finished...
