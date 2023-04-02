@@ -25,25 +25,34 @@ export default function TasksList() {
             backgroundColor: "#1e272e",
             }}
           >
-            <CardContent>
-              <Typography>{task.title}</Typography>
-              <Typography>{task.description}</Typography>
-              <Button
-                variant="contained"
-                color="inherit"
-                onClick={() => console.log('edit')}
-              >
-                Edit
-              </Button>
-              <Button
-                variant="contained"
-                color="warning"
-                onClick={() => console.log('delete')}
-              >
-                Delete
-              </Button>
-          </CardContent>
-        </Card>
+            <CardContent
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+              }}
+            >
+              <div style={{ color: "white" }}>
+                <Typography>{task.title}</Typography>
+                <Typography>{task.description}</Typography>
+              </div>
+              <div>
+                <Button
+                  variant="contained"
+                  color="inherit"
+                  onClick={() => console.log('edit')}
+                >
+                  Edit
+                </Button>
+                <Button
+                  variant="contained"
+                  color="warning"
+                  onClick={() => console.log('delete')}
+                >
+                  Delete
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
         ))
       }
     </>

@@ -410,6 +410,8 @@ commit45:
 	We now show the task in cards storing it in a state the card can access.
 commit46:
 	Adding also the buttons I will use, but still missing formating.
+commit47:
+	Leaving the list a bit better formated and still missing buttons functionality.
 
 ## To Watch Continue when finished...
 
