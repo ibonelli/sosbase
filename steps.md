@@ -415,10 +415,17 @@ commit47:
 
 ## Eliminar Tarea en el UI (02:28:15)
 
-commit44:
+commit48:
 	We now have a successful delete which show on console the 204 status and no data (the REST was built like that).
-commit45:
+commit49:
 	We add a unique ID to the Card component to avoid the warning message in the log.
+commit50:
+	We refresh/update the UI and remove the deleted task using JS filter().
+commit51:
+	Adding a try/catch to the async() block.
+
+## Actualizar Tarea en el UI (02:35:55)
+
 
 
 ## To Watch Continue when finished...

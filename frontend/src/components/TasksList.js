@@ -11,10 +11,14 @@ export default function TasksList() {
   };
 
   const handleDelete = async (id) => {
-    const res = await fetch(`http://localhost:3000/tasks/${id}`, {
-      method: "DELETE",
-    });
-    setTasks(tasks.filter((task) => task.id !== id));
+    try {
+      const res = await fetch(`http://localhost:3000/tasks/${id}`, {
+        method: "DELETE",
+        });
+      setTasks(tasks.filter((task) => task.id !== id));
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   useEffect(() => {
