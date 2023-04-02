@@ -406,7 +406,8 @@ We will list all the tasks we have stored.
 
 commit44:
 	We fetch the tasks when loading the "/" URL and show it in the console.
-
+commit45:
+	We now show the task in cards storing it in a state the card can access.
 
 ## To Watch Continue when finished...
 
