@@ -14,7 +14,7 @@ export default function TasksList() {
     const res = await fetch(`http://localhost:3000/tasks/${id}`, {
       method: "DELETE",
     });
-    console.log(res);
+    setTasks(tasks.filter((task) => task.id !== id));
   };
 
   useEffect(() => {
