@@ -402,6 +402,10 @@ commit43:
 
 ## Listar Tareas en el UI (02:16:42)
 
+We will list all the tasks we have stored.
+
+commit44:
+	We fetch the tasks when loading the "/" URL and show it in the console.
 
 
 ## To Watch Continue when finished...
