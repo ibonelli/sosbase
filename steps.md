@@ -413,6 +413,12 @@ commit46:
 commit47:
 	Leaving the list a bit better formated and still missing buttons functionality.
 
+## Eliminar Tarea en el UI (02:28:15)
+
+commit44:
+	We now have a successful delete which show on console the 204 status and no data (the REST was built like that).
+
+
 ## To Watch Continue when finished...
 
 React c/ Hooks
