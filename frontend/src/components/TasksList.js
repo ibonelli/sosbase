@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Card, CardContent, Typography } from "@mui/material";
+import { Button, Card, CardContent, Typography } from "@mui/material";
 
 export default function TasksList() {
   const [tasks, setTasks] = useState([]);
@@ -19,10 +19,29 @@ export default function TasksList() {
       <h1>TasksList</h1>
       {
         tasks.map((task) => (
-          <Card>
+          <Card
+          style={{
+            marginBottom: ".7rem",
+            backgroundColor: "#1e272e",
+            }}
+          >
             <CardContent>
               <Typography>{task.title}</Typography>
               <Typography>{task.description}</Typography>
+              <Button
+                variant="contained"
+                color="inherit"
+                onClick={() => console.log('edit')}
+              >
+                Edit
+              </Button>
+              <Button
+                variant="contained"
+                color="warning"
+                onClick={() => console.log('delete')}
+              >
+                Delete
+              </Button>
           </CardContent>
         </Card>
         ))
