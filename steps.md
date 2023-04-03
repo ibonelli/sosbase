@@ -438,6 +438,8 @@ commit56:
 	On new it creates the task, but when updating it only shows the console log (it should be doing an UPDATE).
 commit57:
 	Now we do update the task when we are editing!
+commit58:
+	The last step had an error, plus we now make the form title change if editing and change the button so it works for both.
 
 ## To Watch Continue when finished...
 

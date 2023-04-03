@@ -41,7 +41,7 @@ export default function TaskForm() {
             body: JSON.stringify(task),
           }
         );
-        const data = await response.json();
+        const data = await res.json();
       } else {
         const res = await fetch("http://localhost:3000/tasks", {
           method: "POST",
@@ -83,7 +83,7 @@ export default function TaskForm() {
           }}
         >
           <Typography variant="h5" textAlign="center" color="white">
-            Create Task
+            { editing ? "Update Task" : "Create Task" }
           </Typography>
           <CardContent>
             <form onSubmit={handleSubmit}>
@@ -121,7 +121,7 @@ export default function TaskForm() {
                 color="primary"
                 disabled={!task.title || !task.description}
               >
-                { loading ? <CircularProgress color="inherit" size={25} /> : "Create" }
+                { loading ? <CircularProgress color="inherit" size={25} /> : "Save" }
               </Button>
               </form>
           </CardContent>
