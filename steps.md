@@ -431,7 +431,11 @@ commit52:
 commit53:
 	We make sure we get an ID. UseEffect() will allow us to check the param when loading.
 commit54:
-	Created loadTask() which using the ID fetches the data from the backend.
+	Created loadTask() which using the ID fetches the data from the backend and shows it in the console.
+commit55:
+	We have the title/description information, but it creates a new task.
+commit56:
+	We now...
 
 ## To Watch Continue when finished...
 

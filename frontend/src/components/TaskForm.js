@@ -24,7 +24,7 @@ export default function TaskForm() {
   const loadTask = async (id) => {
     const res = await fetch("http://localhost:3000/tasks/" + id);
     const data = await res.json();
-    console.log(data);
+    setTask({ title: data.title, description: data.description });
   };
 
   const handleSubmit = async(event) => {
