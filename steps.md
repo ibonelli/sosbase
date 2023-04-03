@@ -426,6 +426,8 @@ commit51:
 
 ## Actualizar Tarea en el UI (02:35:55)
 
+commit52:
+	We create a new route, add navigate to the TaskList and connect it to the button.
 
 
 ## To Watch Continue when finished...
