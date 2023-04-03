@@ -35,7 +35,13 @@ export default function TaskForm() {
 
     try {
       if (editing) {
-        console.log("Use UPDATE!");
+        const res = await fetch("http://localhost:3000/tasks/" + params.id, {
+            method: "PUT",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(task),
+          }
+        );
+        const data = await response.json();
       } else {
         const res = await fetch("http://localhost:3000/tasks", {
           method: "POST",

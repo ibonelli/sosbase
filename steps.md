@@ -436,6 +436,8 @@ commit55:
 	We have the title/description information, but it creates a new task.
 commit56:
 	On new it creates the task, but when updating it only shows the console log (it should be doing an UPDATE).
+commit57:
+	Now we do update the task when we are editing!
 
 ## To Watch Continue when finished...
 
