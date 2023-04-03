@@ -17,6 +17,7 @@ export default function TaskForm() {
     description: "",
   });
   const [loading, setLoading] = useState(false);
+  const [editing, setEditing] = useState(false);
 
   const navigate = useNavigate();
   const params = useParams();
@@ -25,22 +26,30 @@ export default function TaskForm() {
     const res = await fetch("http://localhost:3000/tasks/" + id);
     const data = await res.json();
     setTask({ title: data.title, description: data.description });
+    setEditing(true);
   };
 
   const handleSubmit = async(event) => {
     event.preventDefault();
-
     setLoading(true);
-    const res = await fetch("http://localhost:3000/tasks", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(task),
-    });
 
-    const data = await res.json();
+    try {
+      if (editing) {
+        console.log("Use UPDATE!");
+      } else {
+        const res = await fetch("http://localhost:3000/tasks", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(task),
+        });
+        const data = await res.json();
+      }
 
-    setLoading(false);
-    navigate("/");
+      setLoading(false);
+      navigate("/");
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   const handleChange = (event) =>
@@ -51,7 +60,7 @@ export default function TaskForm() {
         loadTask(params.id);
       }
     }, [params.id]);
-    
+
     return (
     <Grid
       container
