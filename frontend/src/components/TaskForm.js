@@ -21,6 +21,12 @@ export default function TaskForm() {
   const navigate = useNavigate();
   const params = useParams();
 
+  const loadTask = async (id) => {
+    const res = await fetch("http://localhost:3000/tasks/" + id);
+    const data = await res.json();
+    console.log(data);
+  };
+
   const handleSubmit = async(event) => {
     event.preventDefault();
 
@@ -42,7 +48,7 @@ export default function TaskForm() {
 
     useEffect(() => {
       if (params.id) {
-        console.log(params.id);
+        loadTask(params.id);
       }
     }, [params.id]);
     

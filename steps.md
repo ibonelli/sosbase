@@ -430,6 +430,8 @@ commit52:
 	We create a new route, add navigate to the TaskList and connect it to the button.
 commit53:
 	We make sure we get an ID. UseEffect() will allow us to check the param when loading.
+commit54:
+	Created loadTask() which using the ID fetches the data from the backend.
 
 ## To Watch Continue when finished...
 
