@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 import {
   Grid,
@@ -19,6 +19,7 @@ export default function TaskForm() {
   const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate();
+  const params = useParams();
 
   const handleSubmit = async(event) => {
     event.preventDefault();
@@ -39,7 +40,13 @@ export default function TaskForm() {
   const handleChange = (event) =>
     setTask({ ...task, [event.target.name]: event.target.value });
 
-  return (
+    useEffect(() => {
+      if (params.id) {
+        console.log(params.id);
+      }
+    }, [params.id]);
+    
+    return (
     <Grid
       container
       alignItems="center"
